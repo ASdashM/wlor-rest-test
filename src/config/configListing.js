@@ -48,6 +48,31 @@
  */
 export const listingFields = [
   {
+    key: 'product',
+    scope: 'public',
+    schemaType: 'enum',
+    enumOptions: [
+      {option: 'bikes', label: 'Bikes'},
+      {option: 'power-tool', label: 'Power tool'}
+    ],
+    filterConfig: {
+      indexForSearch: true,
+      filterType: 'SelectMultipleFilter',
+      label: 'Power tool',
+      group: 'primary',
+    },
+    showConfig: {
+      label: 'Power tool',
+      isDetail:  true,
+    },
+    saveConfig: {
+      label: 'Power tool',
+      placeholderMessage: 'Bikes',
+      isRequired: true,
+      requiredMessage: 'You need to select a power tool.'
+    }
+  },
+  {
     key: 'category',
     scope: 'public',
     schemaType: 'enum',
